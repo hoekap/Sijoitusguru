@@ -185,9 +185,11 @@ class Graafinen(Frame):
         """
         for i in self.__kuvaaja_grafiikka:
             self.__canvas.delete(i)
+        del self.__kuvaaja_grafiikka[:]
 
         for i in self.__y_akselin_grafiikka:
             self.__canvas.delete(i)
+        del self.__y_akselin_grafiikka[:]
 
         # Luodaan y-akselin asteikko
         self.luo_hinta_axis()
